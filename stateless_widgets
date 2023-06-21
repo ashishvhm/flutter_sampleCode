@@ -1,0 +1,27 @@
+void main() => runApp(const MyApp());
+ 
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          leading: const Icon(Icons.menu),
+          backgroundColor: Colors.grey,
+          title: const Text(
+            "Hello World",
+            textAlign: TextAlign.start,
+          ),
+        ), // AppBar
+        body: const Center(
+          child: Text(
+            "Stateless Widget",
+            style: TextStyle(color: Colors.black, fontSize: 30),
+          ),
+        ), // Container
+      ), // Scaffold
+    ); // MaterialApp
+  }
